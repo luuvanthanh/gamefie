@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    platform: linux/amd64
+    image: postgres:13
+    environment:
+      POSTGRES_DB: gamefi
+      POSTGRES_USER: gamefi
+      POSTGRES_PASSWORD: gamefi
+    ports:
+     - 5434:5432
+    volumes:
+      - ./.data/postgresql:/var/lib/postgresql/data
